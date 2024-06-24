@@ -1,8 +1,7 @@
-document.getElementById('btn-explore').addEventListener('click', function() {
-    var overlay = document.getElementById('overlay');
-    overlay.classList.add('overlay-active');
-    
-    setTimeout(() => {
-        overlay.classList.remove('overlay-active');
-    }, 500); 
+document.addEventListener("DOMContentLoaded", () => {
+const navLinks = document.querySelector('#navLinks');
+const navToggleBtn = document.querySelector('#navToggleBtn');
+navToggleBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
 });
