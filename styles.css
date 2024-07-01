@@ -1,13 +1,13 @@
 * {
     font-family: "Bellefair", sans-serif;
 }
-
+/* 
 html,
 body {
     height: 100%;
     width: 100%;
     position: relative;
-}
+} */
 
 .home-background {
     background-image: url(./assets/background-home-img.jpg);
@@ -19,7 +19,6 @@ body {
     width: 100%;
     position: absolute;
     z-index: -10;
-    
 }
 
 html {
@@ -75,7 +74,7 @@ html {
     height: 1px;
     background-color: #444;
     margin: 0 -25px 0 64px;
-    z-index:1;
+    z-index: 1;
 }
 
 .content-container-home-page {
@@ -142,10 +141,10 @@ html {
 }
 
 @media (max-width: 800px) {
-    .home-background{
+    .home-background {
         transform: rotate(90deg) scale(2);
     }
-    
+
     .nav-links li {
         margin: 0 10px;
     }
@@ -164,6 +163,7 @@ html {
     .nav-line {
         display: none;
     }
+
     .content-container-home-page {
         display: flex;
         flex-wrap: wrap;
