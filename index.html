@@ -4,24 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destination</title>
+    <title>Space Tourism</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="/Sprint13-Programarea-asincrona/index.js"></script>
+    <link rel="icon" type="image/png" href="assets/favicon-32x32.png">
+    <script src="index.js"></script>
+
+    <style>
+        @media only screen and (min-width:375px){
+            body {
+                background: url("/assets/home/background-home-mobile.jpg");
+                background-size: cover;
+                height: 100vh;
+            }
+        }
+        @media only screen and (min-width:768px){
+            body {
+                background: url("/assets/home/background-home-tablet.jpg");
+                background-size: cover;
+                height: 100vh;
+            }
+        }
+        @media only screen and (min-width:1280px){
+            body {
+                background: url("/assets/home/background-home-desktop.jpg");
+                background-size: cover;
+                height: 100vh;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <div class="home-background"></div>
     <nav class="nav-main">
         <div class="logo">
-            <img src="/Sprint13-Programarea-asincrona/assets/Group 2.svg" alt="Logo">
+            <a href="index.html"><img src="assets/Group 2.svg" alt="company logo"></a>
         </div>
         <div class="nav-line"></div>
         <ul id="navLinks" class="nav-links">
-            <li><a href="#">00 HOME</a></li>
-            <li><a href="#">01 DESTINATION</a></li>
-            <li><a href="#">02 CREW</a></li>
-            <li><a href="#">03 TECHNOLOGY</a></li>
+            <li><a href="index.html">00 HOME</a></li>
+            <li><a href="destination.html">01 DESTINATION</a></li>
+            <li><a href="crew.html">02 CREW</a></li>
+            <li><a href="technology.html">03 TECHNOLOGY</a></li>
         </ul>
         <button id="navToggleBtn" class="nav-toggle">
             <div class="bar"></div>

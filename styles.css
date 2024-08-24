@@ -1,26 +1,3 @@
-* {
-    font-family: "Bellefair", sans-serif;
-}
-/* 
-html,
-body {
-    height: 100%;
-    width: 100%;
-    position: relative;
-} */
-
-.home-background {
-    background-image: url(./assets/background-home-img.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 100%;
-    position: absolute;
-    z-index: -10;
-}
-
 html {
     -webkit-box-sizing: border-box;
     box-sizing: border-box
@@ -140,11 +117,128 @@ html {
     box-shadow: 0px 0px 0px 44px rgba(255, 255, 255, 0.10), 5px 5px 15px 5px rgba(255, 255, 255, 0.10);
 }
 
-@media (max-width: 800px) {
-    .home-background {
-        transform: rotate(90deg) scale(2);
-    }
+/*destination styles */
+.transparent {
+    opacity: 0.5;
+}
 
+.destination-title {
+    font-weight: 400;
+    margin-left: 5vw;
+    font-size: 28px;
+    line-height: 33.6px;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+}
+
+.destination-page {
+    font-family: "Barlow Condensed", sans-serif;
+    font-style: normal;
+    padding: 20px;
+    color: #ffffffff;
+}
+
+.planet-list {
+    display: flex;
+    text-decoration: none;
+    text-transform: uppercase;
+    list-style-type: none;
+    padding: 0;
+}
+
+.planet-list>li {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    letter-spacing: 2.700000047683716px;
+    text-align: left;
+    padding-right: 50px;
+    color: #d0d6f9;
+
+}
+
+.destination-content {
+    display: flex;
+    justify-content: center;
+}
+
+.destination-pics {
+    padding: 5vh;
+}
+
+.pics-description {
+    width: 445px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.bottom-section {
+    display: flex;
+    text-align: center;
+}
+
+.moon-name {
+    margin: 0;
+    font-family: Bellefair;
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 114.6px;
+    text-align: left;
+}
+
+.moon-desc {
+    font-family: Barlow;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+   color: #D0D6F9;
+}
+.distance{
+    padding-right: 70px;
+}
+.dis-title {
+    font-family: Barlow Condensed;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    letter-spacing: 2.362499952316284px;
+    text-align: left;
+    color: #D0D6F9;
+
+}
+
+.est-time {
+    font-family: Barlow Condensed;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    letter-spacing: 2.362499952316284px;
+    text-align: left;
+    color: #D0D6F9;
+}
+
+.dis-value {
+    font-family: Bellefair;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 32.09px;
+    text-align: left;
+}
+
+.time-value {
+    font-family: Bellefair;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 32.09px;
+    text-align: left;
+}
+
+
+
+
+
+@media (max-width: 800px) {
     .nav-links li {
         margin: 0 10px;
     }
@@ -180,6 +274,7 @@ html {
 }
 
 @media (max-width: 550px) {
+
     .nav-toggle {
         display: block;
         border: none;
