@@ -137,14 +137,20 @@ html {
     padding: 20px;
     color: #ffffffff;
 }
-
+.planets-navbar ul li {
+    padding-left: 20px;
+    padding-right: 20px;
+}
 .planet-list {
     display: flex;
     text-decoration: none;
     text-transform: uppercase;
     list-style-type: none;
-    padding: 0;
+    padding-left: 0;
 }
+.planets-navbar ul li:hover {
+    border-bottom: 3px solid rgb(192, 192, 192);
+  }
 
 .planet-list>li {
     font-size: 16px;
@@ -152,7 +158,6 @@ html {
     line-height: 19.2px;
     letter-spacing: 2.700000047683716px;
     text-align: left;
-    padding-right: 50px;
     color: #d0d6f9;
 
 }
@@ -207,6 +212,18 @@ html {
     color: #D0D6F9;
 
 }
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.planet-picture {
+    animation: rotate 10s linear infinite;
+}
 
 .est-time {
     font-family: Barlow Condensed;
@@ -232,6 +249,10 @@ html {
     font-weight: 400;
     line-height: 32.09px;
     text-align: left;
+}
+#moon-btn{
+    border-bottom: 3px solid white;
+    text-align: center;
 }
 
 
