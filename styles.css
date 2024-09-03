@@ -122,20 +122,20 @@ html {
     opacity: 0.5;
 }
 
-.destination-title {
+.pages-title {
+    font-family: "Barlow Condensed", sans-serif;
     font-weight: 400;
     margin-left: 5vw;
     font-size: 28px;
     line-height: 33.6px;
     letter-spacing: .2rem;
     text-transform: uppercase;
+    color: #FFFFFF;
 }
 
 .destination-page {
-    font-family: "Barlow Condensed", sans-serif;
     font-style: normal;
     padding: 20px;
-    color: #ffffffff;
 }
 
 .planets-navbar ul li {
@@ -146,6 +146,8 @@ html {
 .planet-list {
     display: flex;
     text-decoration: none;
+    font-family: "Barlow Condensed", sans-serif;
+    color: #ffffffff;
     text-transform: uppercase;
     list-style-type: none;
     padding-left: 0;
@@ -187,15 +189,17 @@ html {
 
 .moon-name {
     margin: 0;
-    font-family: Bellefair;
+    font-family: "Bellefair", serif;
     font-size: 100px;
     font-weight: 400;
     line-height: 114.6px;
     text-align: left;
+    color: #FFFFFF;
+
 }
 
 .moon-desc {
-    font-family: Barlow;
+    font-family: "Barlow";
     font-size: 18px;
     font-weight: 400;
     line-height: 32px;
@@ -208,15 +212,17 @@ html {
 }
 
 .dis-title {
-    font-family: Barlow Condensed;
+    font-family: "Barlow Condensed", sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 16.8px;
     letter-spacing: 2.362499952316284px;
     text-align: left;
     color: #D0D6F9;
-
 }
+
+
+
 
 @keyframes rotate {
     from {
@@ -233,7 +239,7 @@ html {
 }
 
 .est-time {
-    font-family: Barlow Condensed;
+    font-family: "Barlow Condensed", sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 16.8px;
@@ -243,19 +249,21 @@ html {
 }
 
 .dis-value {
-    font-family: Bellefair;
+    font-family: "Bellefair", serif;
     font-size: 28px;
     font-weight: 400;
     line-height: 32.09px;
     text-align: left;
+    color: #FFFFFF;
 }
 
 .time-value {
-    font-family: Bellefair;
+    font-family: "Bellefair", serif;
     font-size: 28px;
     font-weight: 400;
     line-height: 32.09px;
     text-align: left;
+    color: #FFFFFF;
 }
 
 .selected-planet {
@@ -264,8 +272,44 @@ html {
     text-align: center;
 }
 
+/*crew style */
+.crew-container {
+    display: flex;
+}
 
+.crew-position {
+    font-family: "Bellefair", serif;
+    color: #FFFFFF;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 36.67px;
+    text-align: left;
+    text-transform: uppercase;
 
+}
+
+.crew-name {
+    font-family: "Bellefair", serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 64.18px;
+    text-align: left;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.crew-desc {
+    font-family: "Barlow";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    color: #d0d6f9;
+}
+
+#crew-list{
+    list-style: none;
+}
 
 
 @media (max-width: 800px) {
