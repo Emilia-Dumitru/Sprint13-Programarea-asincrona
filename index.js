@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-//For destination page
+//for destination page
 document.addEventListener("DOMContentLoaded", function () {
     fetch('data.json')
         .then(response => response.json())
@@ -42,4 +42,67 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         })
         .catch(error => console.error('Error loading JSON:', error));
+});
+
+//for crew page 
+function extractCrewData(crewIndex) {
+    fetch("data.json")
+    .then((response) => response.json())
+    .then((data) => {
+        const crewData = data.crew[crewIndex];
+        const crewImgElement = document.getElementById("crew-img"); 
+        crewImgElement.src = crewData.images.png;
+
+        const bioElement = document.querySelector(".crew-desc");
+        bioElement.textContent = crewData.bio;
+
+        const nameElement = document.querySelector(".crew-name");
+        nameElement.textContent = crewData.name;
+
+        const roleElement = document.querySelector(".crew-position");
+        roleElement.textContent = crewData.role;
+    })
+    .catch((error) => console.error("Error reading JSON file:", error));
+}
+
+function renderCrewList() {
+    fetch("data.json")
+    .then((response) => response.json())
+    .then((data) => {
+        const crewList = data.crew;
+        const crewListEl = document.querySelector("#crew-list");
+        crewList.forEach((crew, index) => {
+            const crewElHtml = `<a href="#"><button id="crew-${index}" class="crew-btn listbtn"></button></a>`;
+            const crewEl = document.createElement("li");
+            crewEl.innerHTML = crewElHtml;
+            crewListEl.appendChild(crewEl);
+
+            const buttonEl = crewEl.querySelector("button"); 
+            buttonEl.addEventListener("click", crewBtnEvenListener);
+        });
+        setActiveCrew(0);
+    })
+    .catch((error) => console.error("Error reading JSON file:", error));
+}
+
+function setActiveCrew(crewIndex) {
+    const crewEls = document.querySelectorAll(".crew-btn");
+    crewEls.forEach((el) => el.classList.remove("active"));
+    const crewEl = document.querySelector(`#crew-${crewIndex}`);
+    if (!crewEl) {
+        console.error("Cannot find crew index " + crewIndex);
+        return;
+    }
+    crewEl.classList.add("active");
+    extractCrewData(crewIndex);
+}
+
+const crewBtnEvenListener = (event) => {
+    const crewEl = event.target;
+    const crewIndex = parseInt(crewEl.id.replace("crew-", ""), 10); 
+    setActiveCrew(crewIndex);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    renderCrewList();
 });

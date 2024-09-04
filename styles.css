@@ -1,3 +1,9 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
 html {
     -webkit-box-sizing: border-box;
     box-sizing: border-box
@@ -125,7 +131,6 @@ html {
 .pages-title {
     font-family: "Barlow Condensed", sans-serif;
     font-weight: 400;
-    margin-left: 5vw;
     font-size: 28px;
     line-height: 33.6px;
     letter-spacing: .2rem;
@@ -275,6 +280,7 @@ html {
 /*crew style */
 .crew-container {
     display: flex;
+    justify-content: center;
 }
 
 .crew-position {
@@ -307,9 +313,49 @@ html {
     color: #d0d6f9;
 }
 
-#crew-list{
+#crew-list {
     list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 120px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: transparent;
 }
+
+.crew-btn {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.crew-btn.active {
+    background-color: #ffffff;
+}
+
+.crew-btn:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.crew-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 500px;
+    padding-right: 50px;
+}
+
+.crew-image {
+    padding-left: 50px;
+}
+
+
+
+
 
 
 @media (max-width: 800px) {
