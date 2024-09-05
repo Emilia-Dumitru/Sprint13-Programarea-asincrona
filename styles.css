@@ -74,7 +74,6 @@ html {
 
 .space-text {
     color: rgba(255, 255, 255, 1);
-    ;
     padding-left: 100px;
 }
 
@@ -97,25 +96,32 @@ html {
     border: none;
 }
 
-.space-text h1 {
-    font-size: 150px;
-    margin: 0;
-    line-height: 171px;
-}
-
-.space-text h2 {
+.top-text {
+    font-family: "Barlow Condensed", sans-serif;
     font-size: 28px;
-    line-height: 33px;
-    color: rgba(208, 214, 249, 1);
-    ;
+    font-weight: 400;
+    line-height: 33.6px;
+    letter-spacing: 4.724999904632568px;
+    text-align: left;
+    color: #D0D6F9;
 }
 
-.space-text p {
+.main-text {
+    font-family: "Bellefair", serif;
+    font-size: 150px;
+    font-weight: 400;
+    line-height: 171.9px;
+    text-align: left;
+    margin: 0;
+}
+
+.bottom-text {
+    font-family: "Barlow";
     font-size: 18px;
+    font-weight: 400;
     line-height: 32px;
-    max-width: 500px;
-    color: rgba(208, 214, 249, 1);
-    ;
+    text-align: left;
+    color: #D0D6F9;
 }
 
 #btn-explore:hover {
@@ -128,6 +134,11 @@ html {
     opacity: 0.5;
 }
 
+.destination-title {
+    padding-left: 100px;
+    margin: 20px;
+}
+
 .pages-title {
     font-family: "Barlow Condensed", sans-serif;
     font-weight: 400;
@@ -136,6 +147,7 @@ html {
     letter-spacing: .2rem;
     text-transform: uppercase;
     color: #FFFFFF;
+    margin: 0;
 }
 
 .destination-page {
@@ -162,13 +174,14 @@ html {
     border-bottom: 3px solid rgb(192, 192, 192);
 }
 
-.planet-list>li {
+.planet-list li {
     font-size: 16px;
     font-weight: 400;
     line-height: 19.2px;
     letter-spacing: 2.700000047683716px;
     text-align: left;
     color: #d0d6f9;
+    cursor: pointer;
 
 }
 
@@ -353,9 +366,90 @@ html {
     padding-left: 50px;
 }
 
+/* technology page */
 
+.terminology-txt {
+    font-family: "Barlow Condensed";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    letter-spacing: 2.700000047683716px;
+    text-align: left;
+    color: #d0d6f9;
+}
 
+.tech-name {
+    font-family: "Bellefair", serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 64.18px;
+    text-align: left;
+    color: #FFFFFF;
+    margin: 0;
+}
 
+.tech-desc {
+    font-family: "Barlow";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    color: #d0d6f9;
+}
+
+.tech-btns {
+    color: #FFFFFF;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    margin: 0 0 30px;
+}
+
+.technologhy-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 0 100px;
+    height: 80vh;
+    align-content: center;
+}
+
+.technologhy-content {
+    max-width: 50%;
+}
+
+.tech-btns li {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tech-btns li.active {
+    background-color: white;
+    color: black;
+}
+
+.tech-row-desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.tech-title {
+    padding-left: 100px;
+    margin-top: 20px;
+}
 
 
 @media (max-width: 800px) {
@@ -392,6 +486,7 @@ html {
         padding: 0;
     }
 }
+
 
 @media (max-width: 550px) {
 

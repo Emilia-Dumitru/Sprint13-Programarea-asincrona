@@ -47,42 +47,42 @@ document.addEventListener("DOMContentLoaded", function () {
 //for crew page 
 function extractCrewData(crewIndex) {
     fetch("data.json")
-    .then((response) => response.json())
-    .then((data) => {
-        const crewData = data.crew[crewIndex];
-        const crewImgElement = document.getElementById("crew-img"); 
-        crewImgElement.src = crewData.images.png;
+        .then((response) => response.json())
+        .then((data) => {
+            const crewData = data.crew[crewIndex];
+            const crewImgElement = document.getElementById("crew-img");
+            crewImgElement.src = crewData.images.png;
 
-        const bioElement = document.querySelector(".crew-desc");
-        bioElement.textContent = crewData.bio;
+            const bioElement = document.querySelector(".crew-desc");
+            bioElement.textContent = crewData.bio;
 
-        const nameElement = document.querySelector(".crew-name");
-        nameElement.textContent = crewData.name;
+            const nameElement = document.querySelector(".crew-name");
+            nameElement.textContent = crewData.name;
 
-        const roleElement = document.querySelector(".crew-position");
-        roleElement.textContent = crewData.role;
-    })
-    .catch((error) => console.error("Error reading JSON file:", error));
+            const roleElement = document.querySelector(".crew-position");
+            roleElement.textContent = crewData.role;
+        })
+        .catch((error) => console.error("Error reading JSON file:", error));
 }
 
 function renderCrewList() {
     fetch("data.json")
-    .then((response) => response.json())
-    .then((data) => {
-        const crewList = data.crew;
-        const crewListEl = document.querySelector("#crew-list");
-        crewList.forEach((crew, index) => {
-            const crewElHtml = `<a href="#"><button id="crew-${index}" class="crew-btn listbtn"></button></a>`;
-            const crewEl = document.createElement("li");
-            crewEl.innerHTML = crewElHtml;
-            crewListEl.appendChild(crewEl);
+        .then((response) => response.json())
+        .then((data) => {
+            const crewList = data.crew;
+            const crewListEl = document.querySelector("#crew-list");
+            crewList.forEach((crew, index) => {
+                const crewElHtml = `<a href="#"><button id="crew-${index}" class="crew-btn listbtn"></button></a>`;
+                const crewEl = document.createElement("li");
+                crewEl.innerHTML = crewElHtml;
+                crewListEl.appendChild(crewEl);
 
-            const buttonEl = crewEl.querySelector("button"); 
-            buttonEl.addEventListener("click", crewBtnEvenListener);
-        });
-        setActiveCrew(0);
-    })
-    .catch((error) => console.error("Error reading JSON file:", error));
+                const buttonEl = crewEl.querySelector("button");
+                buttonEl.addEventListener("click", crewBtnEvenListener);
+            });
+            setActiveCrew(0);
+        })
+        .catch((error) => console.error("Error reading JSON file:", error));
 }
 
 function setActiveCrew(crewIndex) {
@@ -99,10 +99,45 @@ function setActiveCrew(crewIndex) {
 
 const crewBtnEvenListener = (event) => {
     const crewEl = event.target;
-    const crewIndex = parseInt(crewEl.id.replace("crew-", ""), 10); 
+    const crewIndex = parseInt(crewEl.id.replace("crew-", ""), 10);
     setActiveCrew(crewIndex);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
     renderCrewList();
 });
+
+//for technology page
+
+document.addEventListener("DOMContentLoaded", function () {
+    fetch("data.json")
+        .then(response => response.json())
+        .then(data => {
+            const technologyData = data;
+
+            const techNameElement = document.getElementById("tech-name");
+            const techDescriptionElement = document.getElementById("tech-desc");
+            const techImageElement = document.getElementById("tech-image");
+
+            const renderTechnologyContent = (index) => {
+                const selectedTech = technologyData.technology[index];
+                techNameElement.textContent = selectedTech.name.toUpperCase();
+                techDescriptionElement.textContent = selectedTech.description;
+                techImageElement.src = selectedTech.images.portrait;
+            }
+            document.querySelectorAll('.tech-btns li').forEach((button, index) => {
+                button.addEventListener('click', () => {
+                    document.querySelectorAll('.tech-btns li').forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    renderTechnologyContent(index);
+                });
+            });
+
+            renderTechnologyContent(0);
+        })
+        .catch(error => {
+            console.error('Eroare la încărcarea fișierului JSON:', error);
+
+        })
+})
