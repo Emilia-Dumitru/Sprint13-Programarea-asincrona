@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>DESTINATION</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/favicon-32x32.png">
+    <script src="index.js"></script>
+    <style>
+        @media only screen and (min-width: 375px) {
+            body {
+                background: url("/assets/destination/background-destination-mobile.jpg");
+                background-size: cover;
+                height: 100vh;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            body {
+                background: url("/assets/destination/background-destination-tablet.jpg");
+                background-size: cover;
+                height: 100vh;
+            }
+        }
+
+        @media only screen and (min-width: 1280px) {
+            body {
+                background: url("/assets/destination/background-destination-desktop.jpg");
+                background-size: cover;
+                height: 100vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav-main">
+        <div class="logo">
+            <a href="index.html"><img src="assets/Group 2.svg" alt="company logo"></a>
+        </div>
+        <div class="nav-line"></div>
+        <ul id="navLinks" class="nav-links">
+            <li><a href="index.html">00 HOME</a></li>
+            <li><a href="destination.html">01 DESTINATION</a></li>
+            <li><a href="crew.html">02 CREW</a></li>
+            <li><a href="technology.html">03 TECHNOLOGY</a></li>
+        </ul>
+        <button id="navToggleBtn" class="nav-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+    </nav>
+    <div class="destination-page">
+        <div class="destination-title">
+            <h3 class="pages-title">
+                <span class="transparent">01</span> Pick your destination</span>
+            </h3>
+        </div>
+        <div class="destination-content">
+            <div class="destination-pics">
+                <img id="planet-img" class="planet-picture" src="assets/destination/image-moon.png">
+            </div>
+            <div class="pics-description">
+                <div class="planets-navbar">
+                    <ul class="planet-list">
+                        <li class="selected-planet" id="moon-btn">moon</li>
+                        <li id="mars-btn">mars</li>
+                        <li id="europa-btn">europa</li>
+                        <li id="titan-btn">titan</li>
+                    </ul>
+                </div>
+                <h2 class="moon-name" id="moon-name">MOON</h2>
+                <p class="moon-desc" id="moon-desc">See our planet as you’ve never seen it before. A perfect relaxing
+                    trip away to help regain perspective and come back refreshed. While you’re there, take in some
+                    history by visiting the Luna 2 and Apollo 11 landing sites.</p>
+                <hr>
+                <div class="bottom-section">
+                    <div class="distance">
+                        <p class="dis-title">AVG. DISTANCE</p>
+                        <p class="dis-value" id="dis-value">384,400 KM</p>
+                    </div>
+                    <div class="time">
+                        <p class="est-time">EST. TRAVEL TIME</p>
+                        <p class="time-value" id="time-value">3 DAYS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

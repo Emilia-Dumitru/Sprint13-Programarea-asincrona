@@ -1,0 +1,529 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.nav-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0px;
+    height: 96px;
+}
+
+.logo img {
+    height: 48px;
+    padding-left: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding-right: 100px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.04);
+    height: 96px;
+    width: 750px;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 16px;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #aaa;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #444;
+    margin: 0 -25px 0 64px;
+    z-index: 1;
+}
+
+.content-container-home-page {
+    display: flex;
+    padding-top: 50px;
+}
+
+.space-text,
+.explore-button {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+}
+
+.space-text {
+    color: rgba(255, 255, 255, 1);
+    padding-left: 100px;
+}
+
+.explore-button {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+#btn-explore {
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    height: 274px;
+    border-radius: 50%;
+    width: 274px;
+    font-size: 32px;
+    outline: none;
+    letter-spacing: inherit;
+    border: none;
+}
+
+.top-text {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 33.6px;
+    letter-spacing: 4.724999904632568px;
+    text-align: left;
+    color: #D0D6F9;
+}
+
+.main-text {
+    font-family: "Bellefair", serif;
+    font-size: 150px;
+    font-weight: 400;
+    line-height: 171.9px;
+    text-align: left;
+    margin: 0;
+}
+
+.bottom-text {
+    font-family: "Barlow";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    color: #D0D6F9;
+}
+
+#btn-explore:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 0px 44px rgba(255, 255, 255, 0.10), 5px 5px 15px 5px rgba(255, 255, 255, 0.10);
+}
+
+/*destination styles */
+.transparent {
+    opacity: 0.5;
+}
+
+.destination-title {
+    padding-left: 100px;
+    margin: 20px;
+}
+
+.pages-title {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 33.6px;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.destination-page {
+    font-style: normal;
+    padding: 20px;
+}
+
+.planets-navbar ul li {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.planet-list {
+    display: flex;
+    text-decoration: none;
+    font-family: "Barlow Condensed", sans-serif;
+    color: #ffffffff;
+    text-transform: uppercase;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.planets-navbar ul li:hover {
+    border-bottom: 3px solid rgb(192, 192, 192);
+}
+
+.planet-list li {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    letter-spacing: 2.700000047683716px;
+    text-align: left;
+    color: #d0d6f9;
+    cursor: pointer;
+
+}
+
+.destination-content {
+    display: flex;
+    justify-content: center;
+}
+
+.destination-pics {
+    padding: 5vh;
+}
+
+.pics-description {
+    width: 445px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.bottom-section {
+    display: flex;
+    text-align: center;
+}
+
+.moon-name {
+    margin: 0;
+    font-family: "Bellefair", serif;
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 114.6px;
+    text-align: left;
+    color: #FFFFFF;
+
+}
+
+.moon-desc {
+    font-family: "Barlow";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    color: #D0D6F9;
+}
+
+.distance {
+    padding-right: 70px;
+}
+
+.dis-title {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    letter-spacing: 2.362499952316284px;
+    text-align: left;
+    color: #D0D6F9;
+}
+
+
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.planet-picture {
+    animation: rotate 10s linear infinite;
+}
+
+.est-time {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    letter-spacing: 2.362499952316284px;
+    text-align: left;
+    color: #D0D6F9;
+}
+
+.dis-value {
+    font-family: "Bellefair", serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 32.09px;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.time-value {
+    font-family: "Bellefair", serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 32.09px;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.selected-planet {
+    padding-bottom: 10px;
+    border-bottom: 3px solid white;
+    text-align: center;
+}
+
+/*crew style */
+.crew-container {
+    display: flex;
+    justify-content: center;
+}
+
+.crew-position {
+    font-family: "Bellefair", serif;
+    color: #FFFFFF;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 36.67px;
+    text-align: left;
+    text-transform: uppercase;
+
+}
+
+.crew-name {
+    font-family: "Bellefair", serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 64.18px;
+    text-align: left;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.crew-desc {
+    font-family: "Barlow";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    color: #d0d6f9;
+}
+
+#crew-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 120px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+.crew-btn {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.crew-btn.active {
+    background-color: #ffffff;
+}
+
+.crew-btn:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.crew-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 500px;
+    padding-right: 50px;
+}
+
+.crew-image {
+    padding-left: 50px;
+}
+
+/* technology page */
+
+.terminology-txt {
+    font-family: "Barlow Condensed";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    letter-spacing: 2.700000047683716px;
+    text-align: left;
+    color: #d0d6f9;
+}
+
+.tech-name {
+    font-family: "Bellefair", serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 64.18px;
+    text-align: left;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.tech-desc {
+    font-family: "Barlow";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    color: #d0d6f9;
+}
+
+.tech-btns {
+    color: #FFFFFF;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    margin: 0 0 30px;
+}
+
+.technologhy-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 0 100px;
+    height: 80vh;
+    align-content: center;
+}
+
+.technologhy-content {
+    max-width: 50%;
+}
+
+.tech-btns li {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tech-btns li.active {
+    background-color: white;
+    color: black;
+}
+
+.tech-row-desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.tech-title {
+    padding-left: 100px;
+    margin-top: 20px;
+}
+
+
+@media (max-width: 800px) {
+    .nav-links li {
+        margin: 0 10px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    .nav-links {
+        padding: 0;
+        justify-content: flex-end;
+        width: auto;
+    }
+
+    .nav-line {
+        display: none;
+    }
+
+    .content-container-home-page {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .space-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .nav-toggle {
+        display: block;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .bar {
+        width: 30px;
+        height: 3px;
+        margin: 5px;
+        background-color: white;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        height: auto;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.04);
+        display: none;
+    }
+
+    .nav-links li a {
+        width: 100%;
+    }
+
+    .active {
+        display: flex;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+}
